@@ -33,22 +33,30 @@
       border-radius: 12px;
       padding: 10px;
     }
+    /* Photo agrandie */
     .profile-photo {
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       object-fit: cover;
     }
+    /* Pour que la zone de texte prenne tout l’espace restant */
+    .about-box > div {
+      flex: 1;
+    }
+    /* Titre centré */
     .role {
       font-size: 1.5rem;
       font-weight: bold;
       margin: 0;
       color: #000;
+      text-align: center;
     }
     .tagline {
       margin: 4px 0 0;
       font-size: 0.95rem;
       color: rgba(0,0,0,0.8);
+      text-align: center;
     }
 
     /* Contenu principal */
@@ -175,5 +183,6 @@
   </table>
 </body>
 </html>
+
 
 
