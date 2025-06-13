@@ -23,6 +23,7 @@
       background: #bdb7bd;
     }
 
+    /* Section « À propos » */
     .about-box {
       display: flex;
       align-items: center;
@@ -66,18 +67,33 @@
     .content li {
       margin-bottom: 0.5em;
     }
-    .cta {
+
+    /* Styles des boutons */
+    .cta-container {
+      text-align: center;
+      margin: 1.5em 0;
+    }
+    .cta, .download-link {
       display: inline-block;
-      margin: 1em 0;
+      margin: 0.5em 0;
       padding: 12px 24px;
-      background-color: #c4bebe;
-      color: #000;
       text-decoration: none;
       border-radius: 4px;
       font-weight: bold;
     }
+    .cta {
+      background-color: #c4bebe;
+      color: #000;
+    }
     .cta:hover {
       background-color: #cfcccf;
+    }
+    .download-link {
+      background: #6a8caf;
+      color: #fff;
+    }
+    .download-link:hover {
+      background: #556b8e;
     }
 
     /* Footer */
@@ -96,28 +112,13 @@
     .footer a:hover {
       text-decoration: underline;
     }
-
-    /* Style spécifique pour le lien de téléchargement */
-    .download-link {
-      display: inline-block;
-      margin: 1.5em 0;
-      padding: 12px 24px;
-      background: #6a8caf;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
-    }
-    .download-link:hover {
-      background: #556b8e;
-    }
   </style>
 </head>
 <body>
   <table class="container" cellpadding="0" cellspacing="0">
     <tr>
       <td>
-        <section id="about" class="panel active">
+        <section id="about">
           <div class="about-box">
             <img src="AB SITE WEB.png" alt="Photo d'Angélique BOULLE" class="profile-photo">
             <div>
@@ -135,12 +136,14 @@
         <p>Bonjour <strong>à toute l’équipe</strong>,</p>
         <p>N'hésitez pas à découvrir mon site internet, vous y trouverez de nombreuses informations sur mon parcours et mes réalisations.</p>
 
-              <!-- BOUTON UNIQUE -->
-        <p style="text-align:center;">
-          <a href="https://angie89100.github.io/Strategie-et-management/" class="cta">
-            Découvrir mon site internet
+        <!-- BOUTON 1 : Télécharger la vidéo -->
+        <div class="cta-container">
+          <a href="Remerciement.mp4"
+             download="Remerciement.mp4"
+             class="download-link">
+            📥 Télécharger ma vidéo de remerciement
           </a>
-        </p>
+        </div>
 
         <p><strong>Ce que j’apporte :</strong></p>
         <ul>
@@ -149,30 +152,28 @@
           <li><strong>Déploiement</strong> : GitHub Pages, Netlify, optimisation performance</li>
         </ul>
 
-         <!-- Lien de téléchargement de ta vidéo de remerciement -->
-        <p style="text-align:center;">
-          <a href="Remerciement.mp4"
-             download="Remerciement.mp4"
-             class="download-link">
-            📥 Télécharger ma vidéo de remerciement
+        <!-- BOUTON 2 : Découvrir le site -->
+        <div class="cta-container">
+          <a href="https://angie89100.github.io/Strategie-et-management/" class="cta">
+            Découvrir mon site internet
           </a>
-        </p>
+        </div>
 
         <p>Je serais enchantée de contribuer à vos projets front-end et back-end.</p>
         <p>À bientôt,<br>
            <strong>Angélique BOULLE</strong><br>
-           06 50 97 31 05 
-          • rhstrama@gmail.com
+           06 50 97 31 05 • <a href="mailto:rhstrama@gmail.com">rhstrama@gmail.com</a>
         </p>
       </td>
     </tr>
     <tr>
       <td class="footer">
         72, Grande rue – 89100 Saligny<br>
-        <a href="https://angie89100.github.io/Strategie-et-management/">https://angie89100.github.io/Strategie-et-management</a>
+        <a href="https://angie89100.github.io/Strategie-et-management/">angie89100.github.io/Strategie-et-management</a>
       </td>
     </tr>
   </table>
 </body>
 </html>
+
 
