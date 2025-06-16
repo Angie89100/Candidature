@@ -2,123 +2,137 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Candidature Stratégie digitale, RH, Management du changement</title>
+  <title>Candidature Stratégie digitale, HR, Management du changement</title>
   <style>
-    /* Reset et base */
+    :root {
+      --rose: #fad1e6;
+      --violet: #dcc7f9;
+      --green: #cff4d2;
+      --yellow: #fff9c4;
+      --n900: #1f2937;
+      --n700: #374151;
+      --bloc: #f7f6fb;
+      --bloc-bd: #c8bbf8;
+      --bloc-title: #7357bf;
+    }
     body {
       margin: 0;
       padding: 0;
-      background: #dbd8d8;
-      font-family: 'Times New Roman', Times, serif;
+      background: var(--bloc);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: var(--n900);
     }
     table {
       border-collapse: collapse;
       width: 100%;
+      background: none;
     }
-
-    /* Conteneur global */
     .container {
       max-width: 600px;
-      margin: 0 auto;
-      background: #bdb7bd;
+      margin: 30px auto;
+      background: var(--bloc);
+      border-radius: 16px;
+      box-shadow: 0 2px 16px #e3e3fa;
+      border: 2.5px solid var(--bloc-bd);
+      overflow: hidden;
     }
-
-    /* Section « À propos » */
     .about-box {
       display: flex;
       align-items: center;
       gap: 1rem;
-      background: #cfcccf;
-      border: 2px solid #cfcccf;
-      border-radius: 12px;
-      padding: 10px;
+      background: var(--violet);
+      border-bottom: 2px solid var(--bloc-bd);
+      padding: 14px 18px 10px 18px;
     }
-    /* Photo agrandie */
     .profile-photo {
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       object-fit: cover;
+      border: 3px solid var(--rose);
+      background: #fff;
     }
-    /* Pour que la zone de texte prenne tout l’espace restant */
-    .about-box > div {
-      flex: 1;
-    }
-    /* Titre centré */
     .role {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       font-weight: bold;
       margin: 0;
-      color: #000;
-      text-align: center;
+      color: var(--bloc-title);
+      letter-spacing: 0.5px;
     }
     .tagline {
-      margin: 4px 0 0;
-      font-size: 0.95rem;
-      color: rgba(0,0,0,0.8);
-      text-align: center;
+      margin: 5px 0 0;
+      font-size: 1rem;
+      color: var(--n700);
     }
-
-    /* Contenu principal */
     .content {
-      padding: 20px;
-      color: #070707;
-      line-height: 1.5;
+      padding: 22px 24px 14px 24px;
+      color: var(--n900);
+      line-height: 1.6;
+      background: var(--bloc);
     }
     .content p {
       margin: 1em 0;
     }
     .content ul {
-      padding-left: 20px;
-      margin: 0;
+      padding-left: 22px;
+      margin: 0 0 1.2em 0;
     }
     .content li {
       margin-bottom: 0.5em;
     }
-
-    /* Styles des boutons */
-    .cta-container {
-      text-align: center;
-      margin: 1.5em 0;
-    }
-    .cta, .download-link {
-      display: inline-block;
-      margin: 0.5em 0;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
-    }
     .cta {
-      background-color: #c4bebe;
-      color: #000;
+      display: inline-block;
+      margin: 1.1em 0;
+      padding: 13px 30px;
+      background: linear-gradient(90deg, var(--violet), var(--rose) 85%);
+      color: var(--n900);
+      text-decoration: none;
+      border-radius: 7px;
+      font-weight: bold;
+      font-size: 1.05em;
+      border: 1.5px solid var(--bloc-bd);
+      box-shadow: 0 2px 8px #ece9ff66;
+      transition: background 0.18s;
     }
     .cta:hover {
-      background-color: #cfcccf;
+      background: linear-gradient(90deg, var(--rose), var(--violet) 85%);
+      color: var(--bloc-title);
+      border-color: var(--rose);
     }
     .download-link {
-      background: #6a8caf;
+      display: inline-block;
+      margin: 1.5em 0;
+      padding: 12px 24px;
+      background: var(--bloc-title);
       color: #fff;
+      text-decoration: none;
+      border-radius: 7px;
+      font-weight: bold;
+      border: none;
+      transition: background 0.2s;
+      box-shadow: 0 1px 6px #e7e0ff33;
     }
     .download-link:hover {
-      background: #556b8e;
+      background: var(--rose);
+      color: var(--n900);
     }
-
-    /* Footer */
     .footer {
-      background: #cfcccf;
-      color: #140c0c;
+      background: var(--violet);
+      color: var(--n700);
       text-align: center;
-      font-size: 12px;
-      padding: 15px 10px;
-      border-radius: 0 0 12px 12px;
+      font-size: 13px;
+      padding: 16px 10px;
+      border-radius: 0 0 16px 16px;
+      border-top: 2px solid var(--bloc-bd);
     }
     .footer a {
-      color: #444144;
+      color: var(--bloc-title);
       text-decoration: none;
+      font-weight: bold;
     }
     .footer a:hover {
       text-decoration: underline;
+      color: var(--n900);
     }
   </style>
 </head>
@@ -126,13 +140,13 @@
   <table class="container" cellpadding="0" cellspacing="0">
     <tr>
       <td>
-        <section id="about">
+        <section id="about" class="panel active">
           <div class="about-box">
             <img src="AB SITE WEB.png" alt="Photo d'Angélique BOULLE" class="profile-photo">
             <div>
               <h3 class="role">Candidature Stratégie digitale, RH, Management du changement</h3>
               <p class="tagline">
-                Passionnée par les relations humaines et le développement web, je conçois des sites, des formulaires et divers supports modernes et efficaces.
+                <strong>Passionnée par les relations humaines et le développement web, je mets ma créativité au service de la conception de sites, de formulaires et d'autres supports modernes et performants.</strong>
               </p>
             </div>
           </div>
@@ -141,49 +155,50 @@
     </tr>
     <tr>
       <td class="content">
-        <p>Bonjour <strong>à toute l’équipe</strong>,</p>
-        <p>N'hésitez pas à découvrir mon site internet, vous y trouverez de nombreuses informations sur mon parcours et mes réalisations.</p>
+        <p><strong>Cher(e)s membres de l’équipe,/strong>,</p>
+        <p>Je vous invite à explorer mon site internet où vous découvrirez un aperçu détaillé de mon parcours et de mes réalisations.</p>
 
-     <!-- BOUTON 2 : Découvrir le site -->
-        <div class="cta-container">
+        <p style="text-align:center;">
           <a href="https://angie89100.github.io/Strategie-et-management/" class="cta">
             Découvrir mon site internet
           </a>
-        </div>
+        </p>
 
-        <p><strong>Ce que j’apporte :</strong></p>
+        <p><strong>Voici ce que je propose : :</strong></p>
         <ul>
-          <li><strong>HTML & CSS</strong> : layouts modernes, animations CSS, optimisation avec ChatGPT</li>
-          <li><strong>JavaScript & React</strong> : composants réutilisables, appels API</li>
-          <li><strong>Déploiement</strong> : GitHub Pages, Netlify, optimisation performance</li>
-          <li><strong>Desing</strong> : Canva</li>
+          <li><strong>HTML & CSS</strong> : designs modernes, animations CSS, optimisation avec ChatGPT</li>
+          <li><strong>JavaScript & React</strong> : développement de composants réutilisables, intégration d'appels API</li>
+          <li><strong>Déploiement</strong> : GitHub Pages, Netlify, optimisation des performances</li>
+          <li><strong>Desing</strong> : utilisation avancée de Canva</li>
         </ul>
 
-        
-       <!-- BOUTON 1 : Télécharger la vidéo -->
-        <div class="cta-container">
+
+        <p style="text-align:center;">
           <a href="Remerciement.mp4"
              download="Remerciement.mp4"
              class="download-link">
             📥 Télécharger ma vidéo de remerciement
           </a>
-        </div>
-        
-        <p>Je serais enchantée de contribuer à vos projets front-end et back-end.</p>
+        </p>
+
+        <p>Je suis enthousiaste à l'idée de contribuer à vos projets front-end et back-end.</p>
         <p>À bientôt,<br>
            <strong>Angélique BOULLE</strong><br>
-           06 50 97 31 05 • <a href="mailto:rhstrama@gmail.com">rhstrama@gmail.com</a>
+           06 50 97 31 05 • rhstrama@gmail.com
         </p>
       </td>
     </tr>
     <tr>
       <td class="footer">
-        72, Grande rue – 89100 Saligny<br>
-        <a href="https://angie89100.github.io/Strategie-et-management/">angie89100.github.io/Strategie-et-management</a>
+        72, Grande rue – 89100 Saligny
+        89100 Saligny<br>
+        <a href="https://angie89100.github.io/Strategie-et-management/">Mon site en ligne</a>
       </td>
     </tr>
   </table>
 </body>
+</html>
+
 </html>
 
 
